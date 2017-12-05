@@ -11,6 +11,21 @@ $$
 - <a href='http://zellij.hatenablog.com/entry/20130701/p1' target='_blank'>アインシュタインの縮約表記 - 大人になってからの再学習</a>
 - <a href='http://www.geocities.jp/hp_yamakatsu/summation.html' target='_blank'>アインシュタインの総和規約／縮約記法をマスターしよう</a>
 
+# Einsum.jlのインストール
+
+Github上のレポジトリはこちらになります。
+
+- <a href='https://github.com/ahwillia/Einsum.jl' target='_blank'>ahwillia/Einsum.jl: Einstein summation notation in Julia</a>
+
+インストールする場合、**Pkg.add**を利用すればOKです。
+
+```julia
+Pkg.add("Einsum")
+```
+
+
+# Einsum.jlの例
+
 上の内積の例をjuliaとEinsum.jlを利用して書くと、次のようになります。
 
 ```julia

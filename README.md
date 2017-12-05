@@ -7,7 +7,7 @@
 # 内容
 - [Einsum.jlの紹介](ja/intro.md)
 - [Python numpyとの比較](ja/compare.md)
-- Einsum.jlの中身と使われているJuliaの機能紹介
+- [Einsum.jlの中身と使われているJuliaの機能紹介](ja/detail.md)
 
 # この記事を書いているインフラ
 - gitbook-starter-kit
