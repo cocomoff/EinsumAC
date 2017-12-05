@@ -1,0 +1,4 @@
+- [Einsum.jlの紹介](ja/intro.md)
+- [numpyとの比較](ja/compare.md)
+- [実装詳細補足](ja/detail.md)
+- [Hello World](ja/hello-world.md)
