@@ -1,0 +1,54 @@
+begin
+    Einsum.nothing
+    let
+        begin 
+            $(Expr(:inbounds, true))
+            begin
+                begin
+                    if size(A,1) == size(B,1)
+                        nothing
+                    else 
+                        (Base.throw)(Base.Main.Base.AssertionError("(\$(Expr(:globalref, Einsum, :(==))))(size(A,1),size(B,1))"))
+                    end
+                    begin
+                        if size(B,2) == size(C,1)
+                            nothing
+                        else 
+                            (Base.throw)(Base.Main.Base.AssertionError("(\$(Expr(:globalref, Einsum, :(==))))(size(B,2),size(C,1))"))
+                        end
+                        begin
+                            if size(A,2) == size(C,2)
+                                nothing
+                            else 
+                                (Base.throw)(Base.Main.Base.AssertionError("(\$(Expr(:globalref, Einsum, :(==))))(size(A,2),size(C,2))"))
+                            end
+                            ()
+                        end
+                    end
+                end
+                local T = eltype(A)
+                begin 
+                    local j
+                    for j = 1:size(A,2)
+                        begin
+                            local i
+                            for i = 1:size(A,1)
+                                begin
+                                    local s = zero(T)
+                                    begin
+                                        local k
+                                        for k = 1:size(B,2)
+                                            s += B[i,k] * C[k,j]
+                                        end
+                                    end
+                                    A[i,j] = s
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+            $(Expr(:inbounds, :pop))
+        end
+    end
+end
